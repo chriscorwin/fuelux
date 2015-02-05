@@ -121,3 +121,63 @@
 	}
 
 }
+
+
+
+
+
+input[type="radio"]:not(.sr-only) {
+    -webkit-appearance: none;
+    appearance: none;
+    font-family:"Glyphicons Halflings" !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    line-height: 1;
+    speak: none;
+    border: 1px solid #adadad;
+    border-radius: 7px;
+    color: #fff;
+    font-size: 9px;
+    width: 14px;
+    height: 14px;
+    padding: 1px 0 0 1px;
+    content:"";
+    margin-top: 3px;
+    &[disabled="disabled"] {
+    	opacity: 0.5;
+		cursor: not-allowed;
+		& + .radio-label {
+			// leaving this disabled for now, though @corwin believes it should be dimmed
+	    	// opacity: 0.5;
+			cursor: not-allowed;
+
+		}
+    }
+    &:before {
+	    display: inline-block;
+		content: "";
+    }
+}
+
+input[type="radio"]:not(.sr-only):checked {
+    background: #39b3d7;
+    border-color: #39b3d7;
+}
+input[type="radio"]:not(.sr-only):checked:before {
+  color: white;
+  display: inline-block;
+  content: "";
+  -webkit-font-smoothing: antialiased;
+  background-color: white;
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+  top: -1px;
+  left: 1.5px;
+  position: relative;
+}
+
+
+
