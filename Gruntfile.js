@@ -413,12 +413,22 @@ module.exports = function(grunt) {
 		grunt.task.run(['bump-only:' + versionReleaseType, 'dist', 'replace:readme']);
 	});
 
+
+	/* -------------
+		SERVEFAST
+	------------- */
+	grunt.registerTask('servefast', 'Serve the files with no "dist" build or tests. Optional --no-less to also disabled compiling less into css.', function() {
+		if (! grunt.option('no-less') ) { 
+			grunt.task.run(['less']); 
+		}
+		grunt.task.run(['connect:server', 'watch:css']);
+	});
+
 	/* -------------
 		SERVE
 	------------- */
 	// use '--no-livereload' to disable livereload
 	grunt.registerTask('serve', 'serve files without "dist" build', ['test', 'connect:server', 'watch:contrib']);
-	grunt.registerTask('servefast', 'serve files w/o "dist" build or tests', ['connect:server', 'watch:contrib']);
 	grunt.registerTask('servedist', 'test, build "dist", serve files w/ watch', ['test', 'dist', 'connect:server', 'watch:full']);
 
 
