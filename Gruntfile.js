@@ -224,7 +224,9 @@ module.exports = function(grunt) {
 					sourceMapFilename: 'dist/css/<%= pkg.name %>.css.map'
 				},
 				files: {
-					'dist/css/fuelux.css': 'less/fuelux.less'
+					'dist/css/fuelux-no-namespace.css': 'less/fuelux.less'
+				,	'dist/css/fuelux.css': 'less/fuelux-namespace.less'
+				,	'dist/css/fuelux-ugh.css': 'less/fuelux-ugh.less'
 				}
 			},
 			minify: {
