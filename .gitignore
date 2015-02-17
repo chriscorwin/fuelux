@@ -26,3 +26,9 @@ less/fuelux-no-namespace.less
 
 # sandbox
 dev/dev.html
+
+# dev css and maps
+dist/css/fuelux-dev.css
+dist/css/fuelux-dev.css.map
+dist/css/fuelux-fuelux-no-namespace.css.map
+

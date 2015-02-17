@@ -209,12 +209,43 @@ module.exports = function(grunt) {
 		qunit: {
 			full: {
 				options: {
-					urls: '<%= allTestUrls %>'
+					urls: '<%= allTestUrls %>',
+					screenshot: true,
+					page: {
+						viewportSize: {
+							width: 1280,
+							height: 1024
+						}
+					}
 				}
 			},
 			simple: ['test/*.html']
 		},
 		less: {
+			pre: {
+				options: {
+					strictMath: true,
+					sourceMap: true,
+					outputSourceFiles: true,
+					sourceMapURL: '<%= pkg.name %>-fuelux-no-namespace.css.map',
+					sourceMapFilename: 'dist/css/<%= pkg.name %>-fuelux-no-namespace.css.map'
+				},
+				files: {
+					'less/fuelux-no-namespace.less': 'less/fuelux.less'
+				}
+			},
+			dev: {
+				options: {
+					strictMath: true,
+					sourceMap: true,
+					outputSourceFiles: true,
+					sourceMapURL: '<%= pkg.name %>-dev.css.map',
+					sourceMapFilename: 'dist/css/<%= pkg.name %>-dev.css.map'
+				},
+				files: {
+					'dist/css/fuelux-dev.css': 'less/fuelux.less'
+				}
+			},
 			dist: {
 				options: {
 					strictMath: true,
@@ -224,10 +255,10 @@ module.exports = function(grunt) {
 					sourceMapFilename: 'dist/css/<%= pkg.name %>.css.map'
 				},
 				files: {
-					'less/fuelux-no-namespace.less': 'less/fuelux.less',
 					'dist/css/fuelux.css': 'less/fuelux-namespace.less'
 				}
 			},
+
 			minify: {
 				options: {
 					cleancss: true,
@@ -336,21 +367,21 @@ module.exports = function(grunt) {
 		},
 		watch: {
 			full: {
-				files: ['Gruntfile.js', 'fonts/**', 'js/**', 'less/**', 'lib/**', 'test/**', 'index.html', 'dev.html'],
+				files: ['Gruntfile.js', 'fonts/**', 'js/**', 'less/**', 'lib/**', 'test/**', 'index.html', 'dev.html', '!less/fuelux-no-namespace.less'],
 				options: {
 					livereload: isLivereloadEnabled
 				},
 				tasks: ['test', 'dist']
 			},
 			css: {
-				files: ['Gruntfile.js', 'fonts/**', 'js/**', 'less/**', 'lib/**', 'test/**', 'index.html', 'dev.html'],
+				files: ['Gruntfile.js', 'fonts/**', 'js/**', 'less/**', 'lib/**', 'test/**', 'index.html', 'dev.html', '!less/fuelux-no-namespace.less'],
 				options: {
 					livereload: isLivereloadEnabled
 				},
 				tasks: ['distcss']
 			},
 			contrib: {
-				files: ['Gruntfile.js', 'fonts/**', 'js/**', 'less/**', 'lib/**', 'test/**', 'index.html', 'dev.html'],
+				files: ['Gruntfile.js', 'fonts/**', 'js/**', 'less/**', 'lib/**', 'test/**', 'index.html', 'dev.html', '!less/fuelux-no-namespace.less'],
 				options: {
 					livereload: isLivereloadEnabled
 				},
