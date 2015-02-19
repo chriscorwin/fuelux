@@ -23,11 +23,11 @@
 			&:not(.sr-only) {
 				-webkit-appearance: none;
 				appearance: none;
-				font-family:"Glyphicons Halflings" !important;
-				font-style: normal !important;
-				font-weight: normal !important;
-				font-variant: normal !important;
-				text-transform: none !important;
+				font-family:"Glyphicons Halflings";
+				font-style: normal;
+				font-weight: normal;
+				font-variant: normal;
+				text-transform: none;
 				line-height: 1;
 				speak: none;
 				border: 1px solid #adadad;
@@ -48,11 +48,7 @@
 				}
 
 				/* for keyboard tabbing */
-				&:focus ~ .input-label,
-				&:focus ~ label,
-				&:hover ~ .input-label,
-				&:hover ~ label,
-				& .input-label:hover {
+				&:focus ~ .input-label, &:focus ~ label, &:hover ~ .input-label, &:hover ~  				& .input-label:hover {
 					color: @grayLight;
 				}
 
@@ -66,16 +62,7 @@
 					cursor: not-allowed;
 
 					/* for keyboard tabbing */
-					&:focus ~ .input-label,
-					&:focus ~ label,
-					&:hover ~ .input-label,
-					&:hover ~ label,
-					& ~ label,
-					& .input-label,
-					& ~ .input-label,
-					& ~ .highlight {
-						// leaving this disabled for now, though @corwin believes it should be dimmed
-						// opacity: 0.5;
+					&:focus ~ .input-label, &:focus ~ label, &:hover ~ .input-label, &:hover ~ label, & ~ label, & .input-label, & ~ .input-label, & ~ .highlight {
 						&, &:hover {
 							color: @text-color;
 							cursor: not-allowed;
