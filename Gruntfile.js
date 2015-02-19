@@ -367,21 +367,28 @@ module.exports = function(grunt) {
 		},
 		watch: {
 			full: {
-				files: ['Gruntfile.js', 'fonts/**', 'js/**', 'less/**', 'lib/**', 'test/**', 'index.html', 'dev.html', '!less/fuelux-no-namespace.less'],
+				files: ['Gruntfile.js', 'fonts/**', 'js/**', 'less/**', 'lib/**', 'test/**', 'index.html', 'index-dev.html', 'dev.html', '!less/fuelux-no-namespace.less'],
 				options: {
 					livereload: isLivereloadEnabled
 				},
 				tasks: ['test', 'dist']
 			},
 			css: {
-				files: ['Gruntfile.js', 'fonts/**', 'js/**', 'less/**', 'lib/**', 'test/**', 'index.html', 'dev.html', '!less/fuelux-no-namespace.less'],
+				files: ['Gruntfile.js', 'fonts/**', 'js/**', 'less/**', 'lib/**', 'test/**', 'index.html', 'index-dev.html', 'dev.html', '!less/fuelux-no-namespace.less'],
 				options: {
 					livereload: isLivereloadEnabled
 				},
 				tasks: ['distcss']
 			},
+			cssdev: {
+				files: ['Gruntfile.js', 'less/**', 'index.html', 'index-dev.html', 'dev.html', '!less/fuelux-no-namespace.less'],
+				options: {
+					livereload: isLivereloadEnabled
+				},
+				tasks: ['distcssdev']
+			},
 			contrib: {
-				files: ['Gruntfile.js', 'fonts/**', 'js/**', 'less/**', 'lib/**', 'test/**', 'index.html', 'dev.html', '!less/fuelux-no-namespace.less'],
+				files: ['Gruntfile.js', 'fonts/**', 'js/**', 'less/**', 'lib/**', 'test/**', 'index.html', 'index-dev.html', 'dev.html', '!less/fuelux-no-namespace.less'],
 				options: {
 					livereload: isLivereloadEnabled
 				},
@@ -405,6 +412,9 @@ module.exports = function(grunt) {
 
 	// CSS distribution task
 	grunt.registerTask('distcss', 'Compile LESS into CSS', ['less', 'usebanner', 'delete-temp-less-file']);
+
+	// CSS distribution task
+	grunt.registerTask('distcssdev', 'Compile LESS into the dev CSS', ['less:pre', 'less:dev', 'delete-temp-less-file']);
 
 	// Temporary LESS file deletion task
 	grunt.registerTask('delete-temp-less-file', 'Delete the temporary LESS file created during the build process', function() {
@@ -466,6 +476,17 @@ module.exports = function(grunt) {
 			grunt.task.run(['distcss']);
 		}
 		grunt.task.run(['connect:server', 'watch:css']);
+	});
+
+
+	/* -------------
+		SERVEDEV
+	------------- */
+	grunt.registerTask('servedev', 'Serve the files with no "dist" build or tests. Optional --no-less to also disable compiling less into css.', function() {
+		if (! grunt.option('no-less') ) {
+			grunt.task.run(['distcssdev']);
+		}
+		grunt.task.run(['connect:server', 'watch:cssdev']);
 	});
 
 	/* -------------

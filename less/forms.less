@@ -1,0 +1,113 @@
+.labelHover() {
+	&:hover {
+		color: @grayLight;
+	}
+}
+
+.radio, .checkbox {
+
+
+	&, &-inline {
+		label&, .input-label&, & label, & .input-label {
+			.labelHover;
+		}
+		
+		label, .input-label, label& {
+			cursor: pointer;
+			font-weight: normal;
+			.labelHover;
+		}
+
+		input {
+
+			&:not(.sr-only) {
+				-webkit-appearance: none;
+				appearance: none;
+				font-family:"Glyphicons Halflings" !important;
+				font-style: normal !important;
+				font-weight: normal !important;
+				font-variant: normal !important;
+				text-transform: none !important;
+				line-height: 1;
+				speak: none;
+				border: 1px solid #adadad;
+				color: #fff;
+				font-size: 9px;
+				width: 14px;
+				height: 14px;
+				padding: 1px 0 0 1px;
+				content:"";
+				margin-top: 3px;
+				cursor: pointer;
+
+				&:before {
+					display: inline-block;
+					z-index: 2;
+					-webkit-font-smoothing: antialiased;
+					content: "";
+				}
+
+				/* for keyboard tabbing */
+				&:focus ~ .input-label,
+				&:focus ~ label,
+				&:hover ~ .input-label,
+				&:hover ~ label,
+				& .input-label:hover {
+					color: @grayLight;
+				}
+
+				&:checked {
+					background: #39b3d7;
+					border-color: #39b3d7;
+				}
+
+				&[disabled="disabled"] {
+					opacity: 0.5;
+					cursor: not-allowed;
+
+					/* for keyboard tabbing */
+					&:focus ~ .input-label,
+					&:focus ~ label,
+					&:hover ~ .input-label,
+					&:hover ~ label,
+					& ~ label,
+					& .input-label,
+					& ~ .input-label,
+					& ~ .highlight {
+						// leaving this disabled for now, though @corwin believes it should be dimmed
+						// opacity: 0.5;
+						&, &:hover {
+							color: @text-color;
+							cursor: not-allowed;
+						}
+					}
+				}
+			}
+
+		}
+
+		&, &:hover {
+			input {
+				&:checked {
+
+				}
+			}
+		}
+
+		&.highlight {
+			&:before {
+				left: 4px;
+				top: 7px;
+			}
+		}
+	}
+
+
+	&-inline {
+		&:before {
+			left: 0;
+			top: 3px;
+		}
+	}
+
+}
