@@ -262,6 +262,7 @@ module.exports = function(grunt) {
 			minify: {
 				options: {
 					cleancss: true,
+					compress: true,
 					report: 'min'
 				},
 				files: {
