@@ -27,6 +27,9 @@ less/fuelux-no-namespace.less
 # sandbox
 dev/dev.html
 
+# screenshots
+page-at-timeout-*
+
 # dev css and maps
 dist/css/fuelux-dev.css
 dist/css/fuelux-dev.css.map
