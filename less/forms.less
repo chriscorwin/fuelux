@@ -5,9 +5,12 @@
 }
 
 .radio, .checkbox {
-
-
+	// This handy trick allows us to make rules for .radio, .checkbox, .radio-inline, and, .checkbox-inline all at once.
 	&, &-inline {
+
+		// Sometimes the wrapping containter is a div with .checkbox or .radio, and has a label within it.
+		// Sometimes the label itself is the wrapping container, and has .checkbox or .radio on it.
+		// The use of the amperstand "parent selector" here allows us to cover many scenarios at once, with terse, but elegant, code.
 		label&, .input-label&, & label, & .input-label {
 			.labelHover;
 		}
