@@ -7,7 +7,7 @@
 				z-index: 1;
 			}
 		}
-		
+
 		&:checked {
 			& ~ label {
 				&:before {
@@ -16,6 +16,15 @@
 					line-height: 1.5em;
 					padding-left: 1px;
 				}
+			}
+		}
+	}
+
+	&.hightlight {
+		& + .checkbox-inline.highlight {
+			margin-left: -14px;
+			&.checkbox-custom {
+				margin-left: 0px;
 			}
 		}
 	}
