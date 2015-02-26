@@ -1,0 +1,23 @@
+.checkbox, .checkbox-inline {
+	
+	input[type="checkbox"]:not(.sr-only) {
+		& ~ label {
+			&:before {
+				border-radius: 4px;
+				z-index: 1;
+			}
+		}
+		
+		&:checked {
+			& ~ label {
+				&:before {
+					color: white;
+					content: "\e013";
+					line-height: 1.5em;
+					padding-left: 1px;
+				}
+			}
+		}
+	}
+}
+

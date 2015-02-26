@@ -6,6 +6,9 @@
 
 .radio, .checkbox {
 	// This handy trick allows us to make rules for .radio, .checkbox, .radio-inline, and, .checkbox-inline all at once.
+	&-inline {
+		padding-left: 0;
+	}
 	&, &-inline {
 
 		// Sometimes the wrapping containter is a div with .checkbox or .radio, and has a label within it.
@@ -21,56 +24,87 @@
 			.labelHover;
 		}
 
-		input {
+		&.highlight {
+				left: -4px;
 
-			&:not(.sr-only) {
-				-webkit-appearance: none;
-				appearance: none;
-				font-family:"Glyphicons Halflings";
-				font-style: normal;
-				font-weight: normal;
-				font-variant: normal;
-				text-transform: none;
-				line-height: 1;
-				speak: none;
-				border: 1px solid #adadad;
-				color: #fff;
-				font-size: 9px;
-				width: 14px;
-				height: 14px;
-				padding: 1px 0 0 1px;
-				content:"";
-				margin-top: 3px;
-				cursor: pointer;
+				input:not(.sr-only) {
+				& ~ label {
+					padding: 4px;
+					border-radius: @baseBorderRadius;
+				}
+				&:checked ~ label {
+					background-color: #e9e9e9;
+					opacity: 1;
+					z-index: 0;
+				}
+			}
+		}
 
+		input:not(.sr-only) {
+
+			position: absolute;
+			width: 1px;
+			height: 1px;
+			margin: -1px;
+			padding: 0;
+			overflow: hidden;
+			clip: rect(0,0,0,0);
+			border: 0;
+
+			& ~ label {
+				padding-left: 0;
 				&:before {
+					font-family:"Glyphicons Halflings";
+					font-style: normal;
+					font-weight: normal;
+					font-variant: normal;
+					text-transform: none;
+					line-height: 1;
+					speak: none;
+					border: 1px solid #adadad;
+					color: #fff;
+					font-size: 9px;
+					width: 14px;
+					height: 14px;
+					padding: 0;
+					margin-top: 0;
+					margin-bottom: -2px;
+					cursor: pointer;
 					display: inline-block;
 					z-index: 2;
-					-webkit-font-smoothing: antialiased;
 					content: "";
 				}
 
-				/* for keyboard tabbing */
-				&:focus ~ .input-label, &:focus ~ label, &:hover ~ .input-label, &:hover ~  				& .input-label:hover {
-					color: @grayLight;
-				}
+			}
 
-				&:checked {
-					background: #39b3d7;
-					border-color: #39b3d7;
-				}
 
-				&[disabled="disabled"] {
+			/* for keyboard tabbing */
+			// &:focus ~ .input-label, &:focus ~ label, &:hover ~ .input-label, &:hover ~ & .input-label:hover {
+			// 	color: @grayLight;
+			// }
+
+
+
+			/* for keyboard tabbing */
+			&:focus ~ label, &:focus:hover ~ label, &:checked ~ label, &:checked:hover ~ label {
+				&, &:hover {
+					color: @text-color;
+					cursor: pointer;
+				}
+			}
+
+			&[disabled="disabled"] {
+				& ~ label, & ~ label:before {
+					color: @text-color;
 					opacity: 0.5;
 					cursor: not-allowed;
+				}
+			}
 
-					/* for keyboard tabbing */
-					&:focus ~ .input-label, &:focus ~ label, &:hover ~ .input-label, &:hover ~ label, & ~ label, & .input-label, & ~ .input-label, & ~ .highlight {
-						&, &:hover {
-							color: @text-color;
-							cursor: not-allowed;
-						}
-					}
+			&:checked ~ label {
+				&:before {
+					background: #39b3d7;
+					border-color: #39b3d7;
 				}
 			}
 
