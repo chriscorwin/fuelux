@@ -159,59 +159,125 @@
 			<h2>Checkboxes (new)</h2>
 			<div class="thin-box">
 				<section id="checkboxes-new-block" class="x-panel x-panel-default">
-					<header class="hidden panel-heading">
+					<header class="hidden x-panel-heading">
 						<h3 class="panel-title">Checkboxes (new) Block</h3>
 					</header>
 					<section class="x-panel-body">
+
 						<div class="checkbox">
-							<label for="myCheckboxNew1">
-								<input id="myCheckboxNew1" type="checkbox" value="">
-								<span class="input-label">Checkbox: unchecked on page load</span>
+							<input
+								type="checkbox"
+								id="checkboxes-new-block--1"
+								name="checkboxes-new-block--1"
+								value=""
+							>
+							<label for="checkboxes-new-block--1">
+								Checkbox: unchecked on page load
 							</label>
 						</div>
+
 						<div class="checkbox">
-							<label for="myCheckboxNew2">
-								<input id="myCheckboxNew2" type="checkbox" value="" checked="checked">
-								<span class="input-label">Checkbox: checked on page load</span>
+							<input
+								type="checkbox"
+								id="checkboxes-new-block--2"
+								name="checkboxes-new-block--2"
+								checked="checked"
+								value=""
+							>
+							<label for="checkboxes-new-block--2">
+								Checkbox: checked on page load
 							</label>
 						</div>
+
 						<div class="checkbox">
-							<label for="myCheckboxNew3">
-								<input id="myCheckboxNew3" type="checkbox" value="" disabled="disabled">
-								<span class="input-label">Checkbox: disabled and unchecked on page load</span>
+							<input
+								type="checkbox"
+								id="checkboxes-new-block--3"
+								name="checkboxes-new-block--3"
+								disabled="disabled"
+								value=""
+							>
+							<label for="checkboxes-new-block--3">
+								Checkbox: disabled and unchecked on page load
 							</label>
 						</div>
+
 						<div class="checkbox">
-							<label for="myCheckboxNew4">
-								<input id="myCheckboxNew4" type="checkbox" value="" disabled="disabled" checked="checked">
-								<span class="input-label">Checkbox: disabled and checked on page load</span>
+							<input
+								type="checkbox"
+								id="checkboxes-new-block--4"
+								name="checkboxes-new-block--4"
+								disabled="disabled"
+								checked="checked"
+								value=""
+							>
+							<label for="checkboxes-new-block--4">
+								Checkbox: disabled and checked on page load
 							</label>
 						</div>
+
 					</section>
 				</section>
 
 
 				<section id="checkboxes-new-inline" class="x-panel x-panel-default">
-					<header class="hidden panel-heading">
+					<header class="hidden x-panel-heading">
 						<h3 class="panel-title">Checkboxes (new) Inline</h3>
 					</header>
 					<section class="x-panel-body">
-						<label class="checkbox checkbox-inline" id="myCustomInlineCheckbox11">
-							<input checked="checked" class="checked " type="checkbox" value="">
-							<span class="input-label">1, 2, buckle my shoe</span>
-						</label>
-						<label class="checkbox checkbox-inline" id="myCustomInlineCheckbox21">
-							<input class="" type="checkbox" value="">
-							<span class="input-label">3, 4, shut the door</span>
-						</label>
-						<label class="checkbox checkbox-inline" id="myCustomInlineCheckbox31">
-							<input class="" disabled="disabled" type="checkbox" value="">
-							<span class="input-label">5, 6, pick up sticks</span>
-						</label>
-						<label class="checkbox checkbox-inline" id="myCustomInlineCheckbox41">
-							<input checked="checked" class="checked " disabled="disabled" type="checkbox" value="">
-							<span class="input-label">7, 8, lay them straight</span>
-						</label>
+
+						<div class="checkbox-inline">
+							<input
+								type="checkbox"
+								id="checkboxes-new-inline--1"
+								name="checkboxes-new-inline--1"
+								checked="checked"
+								value=""
+							>
+							<label for="checkboxes-new-inline--1">
+								1, 2, buckle my shoe
+							</label>
+						</div>
+
+						<div class="checkbox-inline">
+							<input
+								type="checkbox"
+								id="checkboxes-new-inline--2"
+								name="checkboxes-new-inline--2"
+								value=""
+							>
+							<label for="checkboxes-new-inline--2">
+								3, 4, shut the door
+							</label>
+						</div>
+
+						<div class="checkbox-inline">
+							<input
+								type="checkbox"
+								id="checkboxes-new-inline--3"
+								name="checkboxes-new-inline--3"
+								checked="checked"
+								disabled="disabled"
+								value=""
+							>
+							<label for="checkboxes-new-inline--3">
+								5, 6, pick up sticks
+							</label>
+						</div>
+
+						<div class="checkbox-inline">
+							<input
+								type="checkbox"
+								id="checkboxes-new-inline--4"
+								name="checkboxes-new-inline--4"
+								disabled="disabled"
+								value=""
+							>
+							<label for="checkboxes-new-inline--4">
+								7, 8, lay them straight
+							</label>
+						</div>
+
 					</section>
 				</section>
 
@@ -219,115 +285,184 @@
 
 
 				<section id="checkboxes-new-toggling" class="x-panel x-panel-default">
-					<header class="hidden panel-heading">
+					<header class="hidden x-panel-heading">
 						<h3 class="panel-title">Checkboxes (new) Toggling</h3>
 					</header>
-					<section class="x-panel-body">
+					<div class="x-panel-body">
+
 						<div class="checkbox">
-							<label id="myCustomTogglingCheckbox11">
-								<input class="" type="checkbox" value="" data-toggle="collapse" data-target=".checkboxToggle11" aria-expanded="false" aria-controls="checkboxToggle11" >
-								<span class="input-label">Custom checkbox toggles by class</span>
+							<input
+								type="checkbox"
+								id="checkboxes-new-toggling--1"
+								name="checkboxes-new-toggling--1"
+								data-toggle="collapse"
+								data-target=".checkboxes-new-toggling-class"
+								aria-expanded="false"
+								aria-controls="checkboxes-new-toggling-class"
+								checked="checked"
+								value=""
+							>
+							<label for="checkboxes-new-toggling--1">
+								Custom checkbox toggles by class
 							</label>
 						</div>
+
 						<div class="checkbox">
-							<label id="myCustomTogglingCheckbox21">
-								<input class="" type="checkbox" value="" data-toggle="collapse" data-target="#checkboxToggleId21" aria-expanded="false" aria-controls="checkboxToggleId21" >
-								<span class="input-label">Custom checkbox toggles by ID</span>
+							<input
+								type="checkbox"
+								id="checkboxes-new-toggling--2"
+								name="checkboxes-new-toggling--2"
+								data-toggle="collapse"
+								data-target="#checkboxes-new-toggling-id"
+								aria-expanded="false"
+								aria-controls="checkboxes-new-toggling-id"
+								checked="checked"
+								value=""
+							>
+							<label for="checkboxes-new-toggling--2">
+								Custom checkbox toggles by ID
 							</label>
 						</div>
-						<div aria-hidden="true" class="alert alert-warning fade collapse checkboxToggle11">This message's visibility toggles by class with a checkbox above.</div>
-						<div aria-hidden="true" class="alert alert-success fade collapse checkboxToggle11">This message's visibility toggles by class with a checkbox above.</div>
-						<div aria-hidden="true" class="alert alert-info fade collapse" id="checkboxToggleId21">This message's visibility toggles by id with a checkbox above.</div>
-					</section>
+
+
+						<div aria-hidden="true" class="alert alert-warning fade collapse checkboxes-new-toggling-class">This message's visibility toggles by class with a checkbox above.</div>
+						<div aria-hidden="true" class="alert alert-success fade collapse checkboxes-new-toggling-class">This message's visibility toggles by class with a checkbox above.</div>
+						<div aria-hidden="true" class="alert alert-info fade collapse" id="checkboxes-new-toggling-id">This message's visibility toggles by id with a checkbox above.</div>
+
+					</div>
 				</section>
 
 
-				<section id="checkboxes-new-highlighting-block" class="x-panel x-panel-default">
-					<header class="hidden panel-heading">
-						<h3 class="panel-title">Checkboxes (new) Highlighting Block</h3>
+
+
+
+				<section id="checkboxes-new-block-highlighting" class="x-panel x-panel-default">
+					<header class="hidden x-panel-heading">
+						<h3 class="panel-title">Checkboxes (new) Block Highlighting</h3>
 					</header>
 					<section class="x-panel-body">
+
 						<div class="checkbox highlight">
-							<label>
-								<input type="checkbox" value="" checked="checked">
-								<span class="highlight">
-									Checkbox: hightlight, block, checked
-								</span>
+							<input
+								type="checkbox"
+								id="checkboxes-new-block-highlighting--1"
+								name="checkboxes-new-block-highlighting--1"
+								checked="checked"
+								value=""
+							>
+							<label for="checkboxes-new-block-highlighting--1">
+								Checkbox: checked on page load
 							</label>
 						</div>
+
 						<div class="checkbox highlight">
-							<label>
-								<input type="checkbox" value="" checked="checked">
-								<span class="highlight">
-									Checkbox: hightlight, block, checked
-								</span>
+							<input
+								type="checkbox"
+								id="checkboxes-new-block-highlighting--2"
+								name="checkboxes-new-block-highlighting--2"
+								value=""
+							>
+							<label for="checkboxes-new-block-highlighting--2">
+								Checkbox: unchecked on page load
 							</label>
 						</div>
+
 						<div class="checkbox highlight">
-							<label>
-								<input type="checkbox" value="">
-								<span class="highlight">
-									Checkbox: hightlight, block, unchecked
-								</span>
+							<input
+								type="checkbox"
+								id="checkboxes-new-block-highlighting--3"
+								name="checkboxes-new-block-highlighting--3"
+								checked="checked"
+								disabled="disabled"
+								value=""
+							>
+							<label for="checkboxes-new-block-highlighting--3">
+								Checkbox: unchecked and disabled on page load
 							</label>
 						</div>
+
 						<div class="checkbox highlight">
-							<label>
-								<input type="checkbox" value="" checked="checked">
-								<span class="highlight">
-									Checkbox: hightlight, block, checked
-								</span>
+							<input
+								type="checkbox"
+								id="checkboxes-new-block-highlighting--4"
+								name="checkboxes-new-block-highlighting--4"
+								disabled="disabled"
+								value=""
+							>
+							<label for="checkboxes-new-block-highlighting--4">
+								Checkbox: checked and disabled on page load
 							</label>
 						</div>
+
 					</section>
 				</section>
 
 
-				<section id="checkboxes-new-highlight-inline--1" class="x-panel x-panel-default">
-					<header class="hidden panel-heading">
-						<h3 class="panel-title">Checkboxes (new) Highlighted, Inline (style 1)</h3>
+
+
+
+				<section id="checkboxes-new-inline-highlighting" class="x-panel x-panel-default">
+					<header class="hidden x-panel-heading">
+						<h3 class="panel-title">Checkboxes (new) Inline Highlighting</h3>
 					</header>
 					<section class="x-panel-body">
-						<form class="form-inline">
-							<label class="checkbox-inline highlight" for="myCheckboxHighlightInlineStyle1--1">
-								<input id="myCheckboxHighlightInlineStyle1--1" type="checkbox" checked="checked"> 
-								<span class="input-label highlight">
-									Checkbox: highlight, inline, checked 1
-								</span>
+
+						<div class="checkbox-inline highlight">
+							<input
+								type="checkbox"
+								id="checkboxes-new-inline-highlighting--1"
+								name="checkboxes-new-inline-highlighting--1"
+								checked="checked"
+								value=""
+							>
+							<label for="checkboxes-new-inline-highlighting--1">
+								1, 2, buckle my shoe
 							</label>
-							<label class="checkbox-inline highlight" for="myCheckboxHighlightInlineStyle1--2">
-								<input id="myCheckboxHighlightInlineStyle1--2" type="checkbox">
-								<span class="input-label highlight">
-									Checkbox: highlight, inline, unchecked 1
-								</span>
+						</div>
+
+						<div class="checkbox-inline highlight">
+							<input
+								type="checkbox"
+								id="checkboxes-new-inline-highlighting--2"
+								name="checkboxes-new-inline-highlighting--2"
+								value=""
+							>
+							<label for="checkboxes-new-inline-highlighting--2">
+								3, 4, shut the door
 							</label>
-						</form>
+						</div>
+
+						<div class="checkbox-inline highlight">
+							<input
+								type="checkbox"
+								id="checkboxes-new-inline-highlighting--3"
+								name="checkboxes-new-inline-highlighting--3"
+								checked="checked"
+								disabled="disabled"
+								value=""
+							>
+							<label for="checkboxes-new-inline-highlighting--3">
+								5, 6, pick up sticks
+							</label>
+						</div>
+
+						<div class="checkbox-inline highlight">
+							<input
+								type="checkbox"
+								id="checkboxes-new-inline-highlighting--4"
+								name="checkboxes-new-inline-highlighting--4"
+								disabled="disabled"
+								value=""
+							>
+							<label for="checkboxes-new-inline-highlighting--4">
+								7, 8, lay them straight
+							</label>
+						</div>
+
 					</section>
 				</section>
 
 
-
-				<section id="checkboxes-new-highlight-inline--2" class="x-panel x-panel-default">
-					<header class="hidden panel-heading">
-						<h3 class="panel-title">Checkboxes (new) Highlighted, Inline (style 2)</h3>
-					</header>
-					<section class="x-panel-body">
-						<form class="form-inline">
-							<div class="checkbox-inline highlight">
-								<input id="myCheckboxHighlightInlineStyle2--1" type="checkbox" checked="checked"> 
-								<label class="input-label highlight" for="myCheckboxHighlightInlineStyle2--1">
-									Checkbox: highlight inline checked 2
-								</label>
-							</div>
-							<div class="checkbox-inline highlight">
-								<input id="myCheckboxHighlightInlineStyle2--2" type="checkbox"> 
-								<label class="input-label highlight" for="myCheckboxHighlightInlineStyle2--2">
-									Checkbox: highlight inline unchecked 2
-								</label>
-							</div>
-						</form>
-					</section>
-				</section>
 
 
 			</div>
@@ -702,184 +837,317 @@
 
 		</section>
 
-		<section id="radio-buttons-new">
+		<section id="radiobuttons-new">
 			<h2>Radio Buttons (new)</h2>
 			<div class="thin-box">
-				<section id="radio-buttons-new-block" class="x-panel x-panel-default">
-					<header class="hidden panel-heading">
-						<h3 class="panel-title">Radio Butons (new) Block</h3>
+				<section id="radiobuttons-new-block" class="x-panel x-panel-default">
+					<header class="hidden x-panel-heading">
+						<h3 class="panel-title">Radio Buttons (new) Block</h3>
 					</header>
 					<section class="x-panel-body">
-						<div class="radio">
-							<label for="myRadioNew1">
-								<input id="myRadioNew1" name="myRadioNew1--2" type="radio" value="">
-								<span class="input-label">Radio button: unchecked on page load</span>
-							</label>
-						</div>
-						<div class="radio">
-							<label for="myRadioNew2">
-								<input id="myRadioNew2" name="myRadioNew1--2" type="radio" value="" checked="checked">
-								<span class="input-label">Radio button: checked on page load</span>
-							</label>
-						</div>
-						<div class="radio">
-							<label for="myRadioNew1">
-								<input id="myRadioNew1" type="radio" value="" disabled="disabled">
-								<span class="input-label">Radio button: disabled and unchecked on page load</span>
-							</label>
-						</div>
-						<div class="radio">
-							<label for="myRadioNew1">
-								<input id="myRadioNew1" type="radio" value="" disabled="disabled" checked="checked">
-								<span class="input-label">Radio button: disabled and checked on page load</span>
-							</label>
-						</div>
-					</section>
-				</section>
 
-				<section id="radio-buttons-new-inline" class="x-panel x-panel-default">
-					<header class="hidden panel-heading">
-						<h3 class="panel-title">Radio Butons (new) Inline</h3>
-					</header>
-					<section class="x-panel-body">
-						<label class="radio-inline" for="myRadioNewInline1">
-							<input id="myRadioNewInline1" name="myRadioNewInline" type="radio" value="" checked="checked">
-							<span class="input-label">Checked</span>
-						</label>
-						<label class="radio-inline" for="myRadioNewInline2">
-							<input id="myRadioNewInline2" name="myRadioNewInline" type="radio" value="">
-							<span class="input-label">Unchecked</span>
-						</label>
-						<label class="radio-inline" for="myRadioNewInline3">
-							<input id="myRadioNewInline3" name="myRadioNewInline" type="radio" value="" checked="checked" disabled="disabled">
-							<span class="input-label">Disabled, checked</span>
-						</label>
-						<label class="radio-inline" for="myRadioNewInline4">
-							<input id="myRadioNewInline4" name="myRadioNewInline" type="radio" value="" disabled="disabled">
-							<span class="input-label">Disabled, unchecked</span>
-						</label>
-					</section>
-				</section>
+						<div class="radio">
+							<input
+								type="radio"
+								id="radiobuttons-new-block--1"
+								name="radiobuttons-new-block"
+								value=""
+							>
+							<label for="radiobuttons-new-block--1">
+								Radio Button: unchecked on page load
+							</label>
+						</div>
 
+						<div class="radio">
+							<input
+								type="radio"
+								id="radiobuttons-new-block--2"
+								name="radiobuttons-new-block"
+								checked="checked"
+								value=""
+							>
+							<label for="radiobuttons-new-block--2">
+								Radio Button: checked on page load
+							</label>
+						</div>
 
-				<section id="radio-buttons-new-toggling-class" class="x-panel x-panel-default">
-					<header class="hidden panel-heading">
-						<h3 class="panel-title">Radio Butons (new) Toggling by Class</h3>
-					</header>
-					<section class="x-panel-body">
 						<div class="radio">
-							<label for="myRadioNewToggling1">
-								<input type="radio" name="myRadioNewTogglingClass" value="" data-toggle="collapse" data-target=".radioToggleClass" id="myRadioNewToggling1">
-								<span class="input-label">
-									Toggle by class
-								</span>
+							<input
+								type="radio"
+								id="radiobuttons-new-block--3"
+								name="radiobuttons-new-block"
+								disabled="disabled"
+								value=""
+							>
+							<label for="radiobuttons-new-block--3">
+								Radio Button: disabled and unchecked on page load
 							</label>
 						</div>
-						<div class="radio">
-							<label for="myRadioNewToggling2">
-								<input type="radio" name="myRadioNewTogglingClass" value="" data-toggle="collapse" data-target=".radioToggleClass" id="myRadioNewToggling2">
-								<span class="input-label">
-									Toggle by class
-								</span>
-							</label>
-						</div>
-						<div aria-hidden="true" class="radioToggleClass alert alert-warning fade collapse">This message's visibility toggles by class with a radio above.</div>
-						<div aria-hidden="true" class="radioToggleClass alert alert-success fade collapse">This message's visibility toggles by class with a radio above.</div>
-					</section>
-				</section>
 
-				<section id="radio-buttons-new-toggling-id" class="x-panel x-panel-default">
-					<header class="hidden panel-heading">
-						<h3 class="panel-title">Radio Butons (new) Toggling by ID</h3>
-					</header>
-					<section class="x-panel-body">
 						<div class="radio">
-							<label for="myRadioNewToggling3">
-								<input type="radio"  name="myRadioNewTogglingId" value="" data-toggle="collapse" data-target="#radioToggleId" id="myRadioNewToggling3">
-								<span class="input-label">
-									Radio toggles by ID
-								</span>
+							<input
+								type="radio"
+								id="radiobuttons-new-block--4"
+								name="radiobuttons-new-block"
+								disabled="disabled"
+								checked="checked"
+								value=""
+							>
+							<label for="radiobuttons-new-block--4">
+								Radio Button: disabled and checked on page load
 							</label>
 						</div>
-						<div class="radio">
-							<label for="myRadioNewToggling4">
-								<input type="radio"  name="myRadioNewTogglingId" value="" data-toggle="collapse" data-target="#radioToggleId" id="myRadioNewToggling4">
-								<span class="input-label">
-									Radio toggles by ID
-								</span>
-							</label>
-						</div>
-						<div aria-hidden="true" class="alert alert-info fade collapse" id="radioToggleId">This message's visibility toggles by id with a radio above.</div>
+
 					</section>
 				</section>
 
 
-				<section id="radio-buttons-new-highlighting-block" class="x-panel x-panel-default">
-					<header class="hidden panel-heading">
-						<h3 class="panel-title">Radio Butons (new) Highlighting, Block</h3>
+				<section id="radiobuttons-new-inline" class="x-panel x-panel-default">
+					<header class="hidden x-panel-heading">
+						<h3 class="panel-title">Radio Buttons (new) Inline</h3>
+					</header>
+					<section class="x-panel-body">
+
+						<div class="radio-inline">
+							<input
+								type="radio"
+								id="radiobuttons-new-inline--1"
+								name="radiobuttons-new-inline"
+								checked="checked"
+								value=""
+							>
+							<label for="radiobuttons-new-inline--1">
+								1, 2, buckle my shoe
+							</label>
+						</div>
+
+						<div class="radio-inline">
+							<input
+								type="radio"
+								id="radiobuttons-new-inline--2"
+								name="radiobuttons-new-inline"
+								value=""
+							>
+							<label for="radiobuttons-new-inline--2">
+								3, 4, shut the door
+							</label>
+						</div>
+
+						<div class="radio-inline">
+							<input
+								type="radio"
+								id="radiobuttons-new-inline--3"
+								name="radiobuttons-new-inline"
+								checked="checked"
+								disabled="disabled"
+								value=""
+							>
+							<label for="radiobuttons-new-inline--3">
+								5, 6, pick up sticks
+							</label>
+						</div>
+
+						<div class="radio-inline">
+							<input
+								type="radio"
+								id="radiobuttons-new-inline--4"
+								name="radiobuttons-new-inline"
+								disabled="disabled"
+								value=""
+							>
+							<label for="radiobuttons-new-inline--4">
+								7, 8, lay them straight
+							</label>
+						</div>
+
+					</section>
+				</section>
+
+
+
+
+				<section id="radiobuttons-new-toggling" class="x-panel x-panel-default">
+					<header class="hidden x-panel-heading">
+						<h3 class="panel-title">Radio Buttons (new) Toggling</h3>
 					</header>
 					<div class="x-panel-body">
-						<div class="radio highlight">
-							<label>
-								<input name="myRadioNewHighlightingBlock" type="radio" value="" checked="checked">
-								<span class="highlight">
-									Radio: hightlight, block, checked
-								</span>
+
+						<div class="radio">
+							<input
+								type="radio"
+								id="radiobuttons-new-toggling--1"
+								name="radiobuttons-new-toggling"
+								data-toggle="collapse"
+								data-target=".radiobuttons-new-toggling-class"
+								aria-expanded="false"
+								aria-controls="radiobuttons-new-toggling-class"
+								checked="checked"
+								value=""
+							>
+							<label for="radiobuttons-new-toggling--1">
+								Custom radio toggles by class
 							</label>
 						</div>
-						<div class="radio highlight">
-							<label>
-								<input name="myRadioNewHighlightingBlock" type="radio" value="" >
-								<span class="highlight">
-									Radio: hightlight, block
-								</span>
+
+						<div class="radio">
+							<input
+								type="radio"
+								id="radiobuttons-new-toggling--2"
+								name="radiobuttons-new-toggling"
+								data-toggle="collapse"
+								data-target="#radiobuttons-new-toggling-id"
+								aria-expanded="false"
+								aria-controls="radiobuttons-new-toggling-id"
+								checked="checked"
+								value=""
+							>
+							<label for="radiobuttons-new-toggling--2">
+								Custom radio toggles by ID
 							</label>
 						</div>
-						<div class="radio highlight">
-							<label>
-								<input name="myRadioNewHighlightingBlock" type="radio" value="">
-								<span class="highlight">
-									Radio: hightlight, block
-								</span>
-							</label>
-						</div>
+
+
+						<div aria-hidden="true" class="alert alert-warning fade collapse radiobuttons-new-toggling-class">This message's visibility toggles by class with a radio above.</div>
+						<div aria-hidden="true" class="alert alert-success fade collapse radiobuttons-new-toggling-class">This message's visibility toggles by class with a radio above.</div>
+						<div aria-hidden="true" class="alert alert-info fade collapse" id="radiobuttons-new-toggling-id">This message's visibility toggles by id with a radio above.</div>
+
 					</div>
 				</section>
 
 
 
-				<section id="radio-buttons-new-highlighting-inline" class="x-panel x-panel-default">
-					<header class="hidden panel-heading">
-						<h3 class="panel-title">Radio Butons (new) Highlighting, Inline</h3>
+
+
+				<section id="radiobuttons-new-block-highlighting" class="x-panel x-panel-default">
+					<header class="hidden x-panel-heading">
+						<h3 class="panel-title">Radio Buttons (new) Block Highlighting</h3>
 					</header>
-					<div class="x-panel-body">
-						<div class="radio-inline highlight">
-							<label>
-								<input name="myRadioNewHighlightingInline" type="radio" value="" checked="checked">
-								<span class="highlight">
-									Radio: hightlight, inline, checked
-								</span>
+					<section class="x-panel-body">
+
+						<div class="radio highlight">
+							<input
+								type="radio"
+								id="radiobuttons-new-block-highlighting--1"
+								name="radiobuttons-new-block-highlighting"
+								checked="checked"
+								value=""
+							>
+							<label for="radiobuttons-new-block-highlighting--1">
+								Radio Button: checked on page load
 							</label>
 						</div>
-						<div class="radio-inline highlight">
-							<label>
-								<input name="myRadioNewHighlightingInline" type="radio" value="" >
-								<span class="highlight">
-									Radio: hightlight, inline
-								</span>
+
+						<div class="radio highlight">
+							<input
+								type="radio"
+								id="radiobuttons-new-block-highlighting--2"
+								name="radiobuttons-new-block-highlighting"
+								value=""
+							>
+							<label for="radiobuttons-new-block-highlighting--2">
+								Radio Button: unchecked on page load
 							</label>
 						</div>
-						<div class="radio-inline highlight">
-							<label>
-								<input name="myRadioNewHighlightingInline" type="radio" value="">
-								<span class="highlight">
-									Radio: hightlight, inline
-								</span>
+
+						<div class="radio highlight">
+							<input
+								type="radio"
+								id="radiobuttons-new-block-highlighting--3"
+								name="radiobuttons-new-block-highlighting"
+								checked="checked"
+								disabled="disabled"
+								value=""
+							>
+							<label for="radiobuttons-new-block-highlighting--3">
+								Radio Button: unchecked and disabled on page load
 							</label>
 						</div>
-					</div>
+
+						<div class="radio highlight">
+							<input
+								type="radio"
+								id="radiobuttons-new-block-highlighting--4"
+								name="radiobuttons-new-block-highlighting"
+								disabled="disabled"
+								value=""
+							>
+							<label for="radiobuttons-new-block-highlighting--4">
+								Radio Button: checked and disabled on page load
+							</label>
+						</div>
+
+					</section>
 				</section>
 
+
+
+
+
+				<section id="radiobuttons-new-inline-highlighting" class="x-panel x-panel-default">
+					<header class="hidden x-panel-heading">
+						<h3 class="panel-title">Radio Buttons (new) Inline Highlighting</h3>
+					</header>
+					<section class="x-panel-body">
+
+						<div class="radio-inline highlight">
+							<input
+								type="radio"
+								id="radiobuttons-new-inline-highlighting--1"
+								name="radiobuttons-new-inline-highlighting"
+								checked="checked"
+								value=""
+							>
+							<label for="radiobuttons-new-inline-highlighting--1">
+								1, 2, buckle my shoe
+							</label>
+						</div>
+
+						<div class="radio-inline highlight">
+							<input
+								type="radio"
+								id="radiobuttons-new-inline-highlighting--2"
+								name="radiobuttons-new-inline-highlighting"
+								value=""
+							>
+							<label for="radiobuttons-new-inline-highlighting--2">
+								3, 4, shut the door
+							</label>
+						</div>
+
+						<div class="radio-inline highlight">
+							<input
+								type="radio"
+								id="radiobuttons-new-inline-highlighting--3"
+								name="radiobuttons-new-inline-highlighting"
+								checked="checked"
+								disabled="disabled"
+								value=""
+							>
+							<label for="radiobuttons-new-inline-highlighting--3">
+								5, 6, pick up sticks
+							</label>
+						</div>
+
+						<div class="radio-inline highlight">
+							<input
+								type="radio"
+								id="radiobuttons-new-inline-highlighting--4"
+								name="radiobuttons-new-inline-highlighting"
+								disabled="disabled"
+								value=""
+							>
+							<label for="radiobuttons-new-inline-highlighting--4">
+								7, 8, lay them straight
+							</label>
+						</div>
+
+					</section>
+				</section>
+
+
+
+
+			</div>
 
 		</section>
 
