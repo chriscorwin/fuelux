@@ -13,16 +13,16 @@ module.exports = function (grunt) {
 	grunt.initConfig({
 		// Metadata
 		bannerRelease: '/*!\n' +
-		' * Fuel UX v<%= pkg.version %> \n' +
-		' * Copyright 2012-<%= grunt.template.today("yyyy") %> <%= pkg.author.name %>\n' +
-		' * Licensed under the <%= pkg.license.type %> license (<%= pkg.license.url %>)\n' +
-		' */\n',
+				' * Fuel UX v<%= pkg.version %> \n' +
+				' * Copyright 2012-<%= grunt.template.today("yyyy") %> <%= pkg.author.name %>\n' +
+				' * Licensed under the <%= pkg.license.type %> license (<%= pkg.license.url %>)\n' +
+				' */\n',
 		banner: '/*!\n' +
-		' * Fuel UX EDGE - Built <%= grunt.template.today("yyyy/mm/dd, h:MM:ss TT") %> \n' +
-		' * Previous release: v<%= pkg.version %> \n' +
-		' * Copyright 2012-<%= grunt.template.today("yyyy") %> <%= pkg.author.name %>\n' +
-		' * Licensed under the <%= pkg.license.type %> license (<%= pkg.license.url %>)\n' +
-		' */\n',
+				' * Fuel UX EDGE - Built <%= grunt.template.today("yyyy/mm/dd, h:MM:ss TT") %> \n' +
+				' * Previous release: v<%= pkg.version %> \n' +
+				' * Copyright 2012-<%= grunt.template.today("yyyy") %> <%= pkg.author.name %>\n' +
+				' * Licensed under the <%= pkg.license.type %> license (<%= pkg.license.url %>)\n' +
+				' */\n',
 		bump: {
 			options: {
 				files: ['bower.json', 'package.json'],
@@ -37,24 +37,21 @@ module.exports = function (grunt) {
 		},
 		jqueryCheck: 'if (typeof jQuery === \'undefined\') { throw new Error(\'Fuel UX\\\'s JavaScript requires jQuery\') }\n\n',
 		bootstrapCheck: 'if (typeof jQuery.fn.dropdown === \'undefined\' || typeof jQuery.fn.collapse === \'undefined\') ' +
-		'{ throw new Error(\'Fuel UX\\\'s JavaScript requires Bootstrap\') }\n\n',
+				'{ throw new Error(\'Fuel UX\\\'s JavaScript requires Bootstrap\') }\n\n',
 		pkg: grunt.file.readJSON('package.json'),
 		// Try ENV variables (export SAUCE_ACCESS_KEY=XXXX), if key doesn't exist, try key file
 		sauceLoginFile: grunt.file.exists('SAUCE_API_KEY.yml') ? grunt.file.readYAML('SAUCE_API_KEY.yml') : undefined,
 		sauceUser: process.env.SAUCE_USERNAME || 'fuelux',
 		sauceKey: process.env.SAUCE_ACCESS_KEY ? process.env.SAUCE_ACCESS_KEY : '<%= sauceLoginFile.key %>',
 		// TEST URLS
-		allTestUrls: ['2.1.0', '1.11.0', '1.9.1', 'browserGlobals', 'noMoment', 'codeCoverage' ].map(function (type) {
+		allTestUrls: ['2.1.0', '1.11.0', '1.9.1', 'browserGlobals', 'noMoment', 'codeCoverage'].map(function (type) {
 			if (type === 'browserGlobals') {
 				return 'http://localhost:<%= connect.testServer.options.port %>/test/browser-globals.html';
-			}
-			else if (type === 'codeCoverage') {
+			} else if (type === 'codeCoverage') {
 				return 'http://localhost:<%= connect.testServer.options.port %>/test/?coverage=true';
-			}
-			else if (type === 'noMoment') {
+			} else if (type === 'noMoment') {
 				return 'http://localhost:<%= connect.testServer.options.port %>/test/?no-moment=true';
-			}
-			else {
+			} else {
 				// test dist with multiple jQuery versions
 				return 'http://localhost:<%= connect.testServer.options.port %>/test/?testdist=true';
 			}
@@ -119,20 +116,20 @@ module.exports = function (grunt) {
 				},
 				options: {
 					banner: '<%= banner %>' + '\n\n' +
-					'// For more information on UMD visit: https://github.com/umdjs/umd/' + '\n' +
-					'(function (factory) {' + '\n' +
-					'\tif (typeof define === \'function\' && define.amd) {' + '\n' +
-					'\t\tdefine([\'jquery\', \'bootstrap\'], factory);' + '\n' +
-					'\t} else {' + '\n' +
-					'\t\tfactory(jQuery);' + '\n' +
-					'\t}' + '\n' +
-					'}(function (jQuery) {\n\n' +
-					'<%= jqueryCheck %>' +
-					'<%= bootstrapCheck %>',
+							'// For more information on UMD visit: https://github.com/umdjs/umd/' + '\n' +
+							'(function (factory) {' + '\n' +
+							'\tif (typeof define === \'function\' && define.amd) {' + '\n' +
+							'\t\tdefine([\'jquery\', \'bootstrap\'], factory);' + '\n' +
+							'\t} else {' + '\n' +
+							'\t\tfactory(jQuery);' + '\n' +
+							'\t}' + '\n' +
+							'}(function (jQuery) {\n\n' +
+							'<%= jqueryCheck %>' +
+							'<%= bootstrapCheck %>',
 					footer: '\n}));',
 					process: function (source) {
 						source = '(function ($) {\n\n' +
-							source.replace(/\/\/ -- BEGIN UMD WRAPPER PREFACE --(\n|.)*\/\/ -- END UMD WRAPPER PREFACE --/g, '');
+								source.replace(/\/\/ -- BEGIN UMD WRAPPER PREFACE --(\n|.)*\/\/ -- END UMD WRAPPER PREFACE --/g, '');
 						source = source.replace(/\/\/ -- BEGIN UMD WRAPPER AFTERWORD --(\n|.)*\/\/ -- END UMD WRAPPER AFTERWORD --/g, '') + '\n})(jQuery);\n\n';
 						return source;
 					}
@@ -150,7 +147,7 @@ module.exports = function (grunt) {
 						}
 					},
 					port: process.env.PORT || 8000,
-					useAvailablePort: true // increment port number, if unavailable...
+					useAvailablePort: true// increment port number, if unavailable...
 				}
 			},
 			testServer: {
@@ -162,7 +159,7 @@ module.exports = function (grunt) {
 						}
 					},
 					hostname: '*',
-					port: 9000, // allows main server to be run simultaneously
+					port: 9000,// allows main server to be run simultaneously
 					useAvailablePort: true// increment port number, if unavailable...
 				}
 			}
@@ -274,18 +271,7 @@ module.exports = function (grunt) {
 			}
 		},
 		less: {
-			pre: {
-				options: {
-					strictMath: true,
-					sourceMap: true,
-					outputSourceFiles: true,
-					sourceMapURL: '<%= pkg.name %>-fuelux-no-namespace.css.map',
-					sourceMapFilename: 'dist/css/<%= pkg.name %>-fuelux-no-namespace.css.map'
-				},
-				files: {
-					'less/fuelux-no-namespace.less': 'less/fuelux.less'
-				}
-			},
+
 			dev: {
 				options: {
 					strictMath: true,
@@ -307,7 +293,7 @@ module.exports = function (grunt) {
 					sourceMapFilename: 'dist/css/<%= pkg.name %>.css.map'
 				},
 				files: {
-					'dist/css/fuelux.css': 'less/fuelux-namespace.less'
+					'dist/css/fuelux.css': 'less/fuelux.less'
 				}
 			},
 
@@ -321,7 +307,6 @@ module.exports = function (grunt) {
 					'dist/css/<%= pkg.name %>.min.css': 'dist/css/<%= pkg.name %>.css'
 				}
 			}
-
 		},
 		prompt: {
 			bump: {
@@ -485,14 +470,14 @@ module.exports = function (grunt) {
 			},
 			//only watch and dist less, useful when doing LESS/CSS work
 			less: {
-				files: ['fonts/**', 'less/**', '!less/fuelux-no-namespace.less'],
+				files: ['fonts/**', 'less/**'],
 				options: {
 					livereload: isLivereloadEnabled
 				},
 				tasks: ['distcss']
 			},
 			cssdev: {
-				files: ['Gruntfile.js', 'less/**', 'index.html', 'index-dev.html', 'dev.html', '!less/fuelux-no-namespace.less'],
+				files: ['Gruntfile.js', 'less/**', 'index.html', 'index-dev.html', 'dev.html'],
 				options: {
 					livereload: isLivereloadEnabled
 				},
@@ -530,19 +515,11 @@ module.exports = function (grunt) {
 	grunt.registerTask('distjs', 'concat, uglify', ['concat', 'uglify', 'jsbeautifier']);
 
 	// CSS distribution task
-	grunt.registerTask('distcss', 'Compile LESS into CSS', ['less', 'usebanner', 'delete-temp-less-file']);
+	grunt.registerTask('distcss', 'Compile LESS into CSS', ['less', 'usebanner']);
 
 	// CSS distribution task (dev)
-	grunt.registerTask('distcssdev', 'Compile LESS into the dev CSS', ['less:pre', 'less:dev', 'delete-temp-less-file']);
+	grunt.registerTask('distcssdev', 'Compile LESS into the dev CSS', ['less:dev']);
 
-
-	// Temporary LESS file deletion task
-	grunt.registerTask('delete-temp-less-file', 'Delete the temporary LESS file created during the build process', function () {
-		var options = {
-			force: true
-		};
-		grunt.file.delete('less/fuelux-no-namespace.less', options);
-	});
 
 	// ZIP distribution task
 	grunt.registerTask('distzip', 'Compress and zip "dist"', ['copy:zipsrc', 'compress', 'clean:zipsrc']);
@@ -606,7 +583,7 @@ module.exports = function (grunt) {
 		grunt.log.oklns('releasing: ', grunt.config('bump.increment'));
 
 		if (!grunt.option('no-tests')) {
-			grunt.task.run(['releasetest']); //If phantom timeouts happening because of long-running qunit tests, look into setting `resourceTimeout` in phantom: http://phantomjs.org/api/webpage/property/settings.html
+			grunt.task.run(['releasetest']);//If phantom timeouts happening because of long-running qunit tests, look into setting `resourceTimeout` in phantom: http://phantomjs.org/api/webpage/property/settings.html
 			// Delete any screenshots that may have happened if it got this far. This isn't foolproof
 			// because it relies on the phantomjs server/page timeout, which can take longer than this
 			// grunt task depending on how long saucelabs takes to run...
@@ -665,10 +642,11 @@ module.exports = function (grunt) {
 	});
 
 	// Complies the less files into the -dev versions, does not overwrite the main css files.
-	grunt.registerTask('servedev', 'Serve the files with no "dist" build or tests. Optional --no-less to also disable compiling less into css.', function() {
-		if (! grunt.option('no-less') ) {
+	grunt.registerTask('servedev', 'Serve the files with no "dist" build or tests. Optional --no-less to also disable compiling less into css.', function () {
+		if (!grunt.option('no-less')) {
 			grunt.task.run(['distcssdev']);
 		}
+
 		grunt.task.run(['connect:server', 'watch:cssdev']);
 	});
 
