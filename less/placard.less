@@ -45,6 +45,30 @@
 				position: relative;
 				z-index: 1;
 			}
+
+		}
+
+		&.showing.has-error {
+
+			.placard-footer,
+			.placard-header,
+			.placard-popup {
+				color: @state-danger-text;
+			}
+
+
+			input.placard-field.form-control, textarea.placard-field.form-control {
+				background: @true-white;
+				border: 1px solid @state-danger-text;
+				box-shadow: none;
+				color: @state-danger-text;
+				&:focus {
+					background: @true-white;
+					border: 1px solid @state-danger-text;
+					box-shadow: none;
+					color: @state-danger-text;
+				}
+			}
 		}
 
 		input.placard-field, textarea.placard-field {
@@ -69,6 +93,9 @@
 				box-shadow: none;
 			}
 		}
+
+
+
 
 		&-cancel {
 			font-size: 12px;
@@ -112,6 +139,12 @@
 			position: absolute;
 			right: -8px;
 			top: -8px;
+		}
+		&.showing.has-error .placard-popup {
+			background: @state-danger-bg;
+			background-clip: padding-box;
+			border: 1px solid @state-danger-border;
+			// box-shadow: 0 0 0 1px @true-white inset;
 		}
 
 		.glass {
